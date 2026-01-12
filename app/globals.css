@@ -270,4 +270,87 @@
             }
         }
     }
+
+    #create-event {
+        @apply flex flex-col gap-8 items-center;
+    }
+
+    #create-event .header {
+        @apply flex flex-col gap-4 max-w-2xl text-center w-full;
+    }
+
+    #create-event .header h1 {
+        @apply text-gradient text-5xl font-semibold max-sm:text-3xl;
+    }
+
+    #create-event .header p {
+        @apply text-light-100 text-lg max-sm:text-sm;
+    }
+
+    #create-event .form-container {
+        @apply w-full max-w-4xl mx-auto;
+    }
+
+    .create-event-form {
+        @apply bg-dark-100 border-dark-200 card-shadow flex flex-col gap-6 rounded-[10px] border p-8;
+    }
+
+    .create-event-form .error-message {
+        @apply bg-red-500/10 border border-red-500/50 text-red-500 rounded-[6px] px-4 py-3;
+    }
+
+    .create-event-form .form-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+    }
+
+    .create-event-form .form-group {
+        @apply flex flex-col gap-2;
+    }
+
+    .create-event-form .form-group.full-width {
+        @apply md:col-span-2;
+    }
+
+    .create-event-form .form-group label {
+        @apply text-light-100 text-sm font-medium;
+    }
+
+    .create-event-form .form-group input,
+    .create-event-form .form-group textarea,
+    .create-event-form .form-group select {
+        @apply bg-dark-200 text-foreground rounded-[6px] px-5 py-2.5 border border-transparent focus:border-primary/50 focus:outline-none transition-colors;
+    }
+
+    .create-event-form .form-group input::placeholder,
+    .create-event-form .form-group textarea::placeholder {
+        @apply text-light-200;
+    }
+
+    .create-event-form .form-group textarea {
+        @apply resize-y min-h-[100px];
+    }
+
+    .create-event-form .form-group select {
+        @apply cursor-pointer;
+    }
+
+    .create-event-form .image-upload {
+        @apply flex flex-col gap-4;
+    }
+
+    .create-event-form .image-upload input[type="file"] {
+        @apply cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-[6px] file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-black hover:file:bg-primary/90;
+    }
+
+    .create-event-form .image-upload .image-preview {
+        @apply rounded-[6px] overflow-hidden border border-dark-200;
+    }
+
+    .create-event-form .image-upload .image-preview img {
+        @apply w-full h-auto object-cover;
+    }
+
+    .create-event-form .submit-button {
+        @apply bg-primary hover:bg-primary/90 disabled:bg-primary/50 disabled:cursor-not-allowed w-full cursor-pointer items-center justify-center rounded-[6px] px-4 py-3 text-lg font-semibold text-black transition-colors mt-4;
+    }
 }
